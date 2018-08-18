@@ -16,7 +16,7 @@ class Scraper
  h2 title: @page.css(".post").first.css("h2").text
  em schedule: @page.css(".post").first.css("em").text
    p description: @page.css(".post").first.css("p").text
-   
+
     end
 
     def print_courses
