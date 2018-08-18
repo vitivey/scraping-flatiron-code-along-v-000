@@ -6,11 +6,12 @@ require_relative './course.rb'
 class Scraper
 
     def get_page(url)
-      page=open(url)
+      page=Nokogiri::HTML(open(url))
+      
     end
 
 
-
+  
     def print_courses
     self.make_courses
     Course.all.each do |course|
@@ -21,5 +22,8 @@ class Scraper
       end
     end
   end
-
+  
 end
+
+
+
